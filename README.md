@@ -1,4 +1,4 @@
-# vanilla ts-loader
+# Debug Typescript in Intellij - Test app
 
 ```shell
 npm install
