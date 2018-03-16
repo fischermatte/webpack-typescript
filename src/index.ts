@@ -1,3 +1,5 @@
-import render = require('./render');
+import renderHeader = require('./render-header');
+import renderBody = require('./render-body');
 
-render();
+renderHeader();
+renderBody();
