@@ -1,11 +1,14 @@
 'use strict';
+var path = require('path');
 
 module.exports = {
     mode: 'development',
+    // context: __dirname + '/src/app',
     devtool: 'source-map',
-    entry: './src/index.ts',
+    entry: './src/app/index.ts',
     output: {
-        filename: "bundle.js"
+        path: path.join(__dirname, 'dist'),
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -17,5 +20,12 @@ module.exports = {
     },
     resolve: {
         extensions: [ '.ts', '.tsx', '.js' ]
+    },
+    devServer: {
+        publicPath: '/',
+        contentBase: './src/app',
+        compress: true,
+        port: 9000,
+        hot: true
     }
 };
